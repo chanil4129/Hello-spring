@@ -24,6 +24,7 @@ public class MemberService {
 
         memberRepository.save(member);
         return member.getId();
+
     }
 
     private void validateDuplicateMemeber(Member member) {
@@ -36,11 +37,11 @@ public class MemberService {
     /**
      * 전체 회원 조회
      */
-    public List<Member> findMembers(){
+    public List<Member> findMembers() {
         return memberRepository.findAll();
     }
 
-    public Optional<Member> findOne(Long memberId){
+    public Optional<Member> findOne(Long memberId) {
         return memberRepository.findById(memberId);
     }
 }
